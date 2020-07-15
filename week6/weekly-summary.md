@@ -106,8 +106,8 @@ Doris的优点：
 
 ### 分布式环境一致性解决方案：Zookeeper
 
-分布式系统脑裂: Zooker主要解决的问题
-分布式一致性算法： Paxos
+分布式系统脑裂: Zookeepr主要解决的问题
+分布式一致性算法Paxos : Zookeeper的处理算法是基于Paxos实现的
 
 
 
