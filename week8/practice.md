@@ -16,6 +16,10 @@ public class LinkedNode {
 
 ## 查找合并的元素
 
+注：对算法不是很擅长，也不想花太多时间研究，只是随便写了一下，问题考虑的不是很全面。。。
+
+时间复杂度 O(m+n), 空间复杂度 O(m)
+
 ```java
 public class LinkedNodeTest {
     @Test
@@ -35,13 +39,13 @@ public class LinkedNodeTest {
     }
 
     private Optional<Integer> findMergedNode(LinkedNode head1, LinkedNode head2) {
-        Set<Integer> nodeValues = new HashSet<>();
+        Set<LinkedNode> nodes = new HashSet<>();
         while (head1 != null) {
-            nodeValues.add(head1.value);
+            nodes.add(head1);
             head1 = head1.next;
         }
         while (head2 != null) {
-            if (nodeValues.contains(head2.value)) {
+            if (nodes.contains(head2.value)) {
                 return Optional.of(head2.value);
             }
             head2 = head2.next;
