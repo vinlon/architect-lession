@@ -175,7 +175,7 @@
 public boolean function checkPw($userId, $inputPassword, $encryptedPassword)
 {
 	$str = $userId . $inputPassword . 'random_string'; //单向散列加密，userId + 随机字段串作为Salt
-  return md5($str) === $encryptedPassword;
+    return md5($str) === $encryptedPassword;
 }
 ```
 
